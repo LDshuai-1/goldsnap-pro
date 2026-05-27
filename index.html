@@ -3,163 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoldSnap Pro — 黄金M15专用四维交易系统</title>
+<title>GoldSnap Pro — 黄金M15四维交易系统 | 8大全球权威指标</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; background: #0a0e17; color: #e0e0e0; }
-.hero { background: linear-gradient(135deg, #1a1f2e, #0d1520); padding: 80px 20px; text-align: center; border-bottom: 2px solid #c9a84c; }
-.hero h1 { font-size: 3em; color: #c9a84c; margin-bottom: 10px; }
-.hero h2 { font-size: 1.3em; color: #8892a0; font-weight: 400; }
-.hero .price { font-size: 2.5em; color: #fff; margin-top: 30px; }
-.hero .price small { font-size: 0.5em; color: #888; }
-.cta { background: #c9a84c; color: #000; padding: 16px 50px; font-size: 1.2em; border: none; cursor: pointer; margin-top: 25px; font-weight: bold; border-radius: 5px; }
-.cta:hover { background: #b8932f; }
-.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-.section { margin: 50px 0; }
-.section h3 { color: #c9a84c; font-size: 1.6em; margin-bottom: 20px; border-left: 4px solid #c9a84c; padding-left: 15px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-.card { background: #141b25; border: 1px solid #1e2a3a; border-radius: 10px; padding: 25px; }
-.card h4 { color: #c9a84c; margin-bottom: 12px; font-size: 1.2em; }
-.card p { color: #8892a0; line-height: 1.6; font-size: 0.95em; }
-.card .param { color: #fff; font-family: 'Consolas', monospace; background: #0a0e14; padding: 3px 8px; border-radius: 3px; }
-.check { color: #4caf50; }
-.signal-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.signal-table th { background: #141b25; color: #c9a84c; padding: 12px; text-align: left; border-bottom: 2px solid #c9a84c; }
-.signal-table td { padding: 12px; border-bottom: 1px solid #1e2a3a; }
-.signal-table tr:hover { background: #141b25; }
-.rules { background: #141b25; border: 1px solid #1e2a3a; border-radius: 10px; padding: 25px; margin: 20px 0; }
-.rules li { margin: 10px 0; line-height: 1.7; }
-.rules li::before { content: "▸ "; color: #c9a84c; }
-.packages { display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; }
-.pkg { background: #141b25; border: 1px solid #1e2a3a; border-radius: 10px; padding: 30px; text-align: center; }
-.pkg.premium { border-color: #c9a84c; background: linear-gradient(135deg, #1a1f2e, #141b25); }
-.pkg h4 { font-size: 1.4em; margin-bottom: 10px; }
-.pkg .pkg-price { font-size: 2em; color: #c9a84c; margin: 20px 0; }
-.pkg ul { list-style: none; text-align: left; margin: 20px 0; }
-.pkg ul li { padding: 5px 0; }
-footer { text-align: center; padding: 30px; color: #555; font-size: 0.85em; border-top: 1px solid #1e2a3a; }
-.highlight { color: #c9a84c; font-weight: bold; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei','Segoe UI',sans-serif;background:#0a0e17;color:#e0e0e0;line-height:1.7}
+.hero{background:linear-gradient(135deg,#1a1f2e,#0d1520);padding:60px 20px;text-align:center;border-bottom:2px solid #c9a84c}
+.hero h1{font-size:2.8em;color:#c9a84c}
+.hero h2{font-size:1.2em;color:#8892a0;margin-top:10px;font-weight:400}
+.price{font-size:2.2em;color:#fff;margin:20px 0}.price s{color:#555;font-size:.6em}
+.container{max-width:850px;margin:0 auto;padding:30px 20px}
+h3{color:#c9a84c;font-size:1.5em;margin:30px 0 15px;border-left:4px solid #c9a84c;padding-left:12px}
+.card{background:#141b25;border:1px solid #1e2a3a;border-radius:10px;padding:20px;margin:15px 0}
+.card h4{color:#c9a84c;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.buy-box{background:linear-gradient(135deg,#1a1f2e,#141b25);border:2px solid #c9a84c;border-radius:15px;padding:35px;text-align:center;margin:30px 0}
+.buy-box h3{margin:0 0 15px;border:none;color:#c9a84c}
+.buy-box .big{font-size:3em;color:#c9a84c}
+.steps{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:25px 0}
+.step{text-align:center;width:140px}.step-num{width:50px;height:50px;background:#c9a84c;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.3em;font-weight:bold}
+footer{text-align:center;padding:30px;color:#555;font-size:.85em;border-top:1px solid #1e2a3a}
+.hl{color:#c9a84c;font-weight:bold}
+.qq{background:#12B7F5;color:#fff;padding:4px 12px;border-radius:5px;font-weight:bold}
+.wx{background:#07C160;color:#fff;padding:4px 12px;border-radius:5px;font-weight:bold}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <h1>GoldSnap Pro</h1>
-  <h2>黄金M15专用 · 四维确认交易系统 · 8大全球权威指标</h2>
-  <div class="price">$47 <small>USD / 一次性</small></div>
-  <button class="cta" onclick="document.getElementById('buy').scrollIntoView()">立即购买</button>
-  <p style="margin-top:15px; color:#8892a0; font-size:0.9em;">包含MT4 / MT5双版本 | 30天退款保证</p>
+  <h2>黄金XAUUSD M15专用 · 四维确认交易系统 · 8大权威指标</h2>
+  <div class="price"><s>$97</s> $47 <small style="color:#888">USD / 永久</small></div>
+  <p style="color:#8892a0;margin-top:8px">MT4自定义指标 | 含参数优化指南 | 30天技术支持</p>
 </div>
 
 <div class="container">
 
-<!-- 问题 -->
-<div class="section">
-  <h3>你在黄金M15上是否遇到这些问题？</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>❌ 假突破太多</h4>
-      <p>看着突破了追进去，下一秒就反转。单靠一个指标根本分不清真假。</p>
-    </div>
-    <div class="card">
-      <h4>❌ 出场太早或太晚</h4>
-      <p>赚了10个点就跑了，结果跑了200点。或者一直拿着，盈利变亏损。</p>
-    </div>
-    <div class="card">
-      <h4>❌ 不知道该信哪个指标</h4>
-      <p>MACD说做多，RSI说超买，K线在跌——到底听谁的？</p>
-    </div>
-  </div>
+<h3>📊 产品包含</h3>
+<div class="grid">
+  <div class="card"><h4>SuperTrend</h4>全球最流行趋势跟踪，绿线多红线空，ATR动态止损</div>
+  <div class="card"><h4>Heikin Ashi</h4>平滑蜡烛图，滤噪音，连续同色=趋势确立</div>
+  <div class="card"><h4>Force Index</h4>Elder量价力量指数，M15最佳周期=8</div>
+  <div class="card"><h4>Aroon</h4>趋势强度测量，>70=强趋势入场信号</div>
+  <div class="card"><h4>Keltner Channel</h4>SMA+ATR通道，替代Bollinger，更适合外汇</div>
+  <div class="card"><h4>VWAP</h4>成交量加权均价，机构交易员核心参考</div>
+  <div class="card"><h4>Pivot Points</h4>经典支撑阻力，每日PP/R1-R3/S1-S3</div>
+  <div class="card"><h4>KST</h4>多周期ROC加权，确认大级别转折</div>
 </div>
 
-<!-- 解决方案 -->
-<div class="section">
-  <h3>四维确认法 — 4个指标同时说"做"，你才做</h3>
-  <p style="color:#8892a0; margin-bottom:20px;">不是另一个指标，而是一套<strong>判断系统</strong>。4个维度的独立信号必须全部一致，缺一不可。</p>
+<h3>🎯 四维确认交易法</h3>
+<p style="color:#8892a0">四个维度独立信号全部一致才入场——不是单一指标，是一套判断系统</p>
+<div class="card">
+  <p><span class="hl">① SuperTrend绿线</span> → 趋势方向确认</p>
+  <p><span class="hl">② Heikin Ashi连续阳线</span> → 价格行为确认</p>
+  <p><span class="hl">③ Force Index > 0</span> → 买方力量确认</p>
+  <p><span class="hl">④ Aroon Up > 70</span> → 趋势强度确认</p>
+  <p style="color:#4caf50;margin-top:10px">✅ 四个全满足 → 入场。差一个 → 等。</p>
+</div>
+
+<h3>⚡ 黄金M15专属优化</h3>
+<div class="card">
+  <p>• SuperTrend ATR倍率 <span class="hl">2.5</span> — 非默认3.0，专为黄金调校</p>
+  <p>• Force Index平滑 <span class="hl">EMA(8)</span> — 非经典13，M15更快响应</p>
+  <p>• 含完整 <span class="hl">参数配置指南</span> — 每个参数为什么这么设</p>
+</div>
+
+<div class="buy-box">
+  <h3>💰 立即购买</h3>
+  <div class="big">¥298</div>
+  <p style="color:#8892a0">人民币 / 永久使用 / 30天技术支持</p>
   
-  <table class="signal-table">
-    <tr><th>维度</th><th>指标</th><th>确认内容</th><th>权重</th></tr>
-    <tr><td>🎯 趋势方向</td><td>SuperTrend <span class="param">(10,2.5)</span></td><td>绿线=多头 红线=空头</td><td>⭐⭐⭐</td></tr>
-    <tr><td>📊 价格形态</td><td>Heikin Ashi</td><td>连续同色K线 无影线=强趋势</td><td>⭐⭐⭐</td></tr>
-    <tr><td>💪 买卖力量</td><td>Force Index <span class="param">(EMA 8)</span></td><td>>0买方力量 <0卖方力量</td><td>⭐⭐</td></tr>
-    <tr><td>⚡ 趋势强度</td><td>Aroon <span class="param">(25)</span></td><td>Up>70强上升 Down>70强下降</td><td>⭐⭐</td></tr>
-  </table>
-
-  <div class="rules">
-    <h4 style="color:#c9a84c; margin-bottom:15px;">入场规则（做多示例）</h4>
-    <li><span class="highlight">SuperTrend 绿线</span> — 趋势确认向上</li>
-    <li><span class="highlight">Heikin Ashi 连续阳线</span> — 价格行为确认</li>
-    <li><span class="highlight">Force Index > 0 且上升</span> — 买方力量在增强</li>
-    <li><span class="highlight">Aroon Up > 70</span> — 趋势强度够大</li>
-    <p style="margin-top:15px; color:#4caf50; font-weight:bold;">✅ 四个全满足 → 入场。差一个 → 等。</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div>扫码付款<br><small>微信/支付宝</small></div>
+    <div class="step"><div class="step-num">2</div>发邮件确认<br><small>附付款截图</small></div>
+    <div class="step"><div class="step-num">3</div>10分钟内<br><small>收产品包</small></div>
   </div>
+  
+  <p style="font-size:1.3em;margin:15px 0">
+    📧 <span class="hl">2456167231@qq.com</span>
+  </p>
+  <p style="color:#8892a0">付款后发送截图到邮箱，10分钟内回复ZIP包</p>
+  <p style="color:#8892a0;margin-top:10px">
+    <span class="wx">微信</span> <span class="qq">QQ</span> 同号: 2456167231
+  </p>
 </div>
 
-<!-- 指标卡片 -->
-<div class="section">
-  <h3>8个全球权威技术指标</h3>
-  <div class="grid">
-    <div class="card"><h4>SuperTrend ⭐</h4><p>ATR动态止损趋势线。全球最流行的趋势跟踪指标，绿线做多红线做空。</p></div>
-    <div class="card"><h4>Heikin Ashi ⭐</h4><p>平滑蜡烛图。过滤噪音，趋势肉眼可见，无影线=抓到了强趋势。</p></div>
-    <div class="card"><h4>Force Index ⭐</h4><p>Elder博士量价力量指数。成交量×价格变化，M15最佳周期=8。</p></div>
-    <div class="card"><h4>Aroon ⭐</h4><p>趋势强度测量。新高/新低距现在的时间，>70=强趋势。</p></div>
-    <div class="card"><h4>Keltner Channel</h4><p>SMA中线+ATR通道。替代Bollinger，ATR比标准差更适合外汇。</p></div>
-    <div class="card"><h4>VWAP</h4><p>成交量加权均价。机构交易员的核心参考基准。</p></div>
-    <div class="card"><h4>Pivot Points</h4><p>经典场内交易员支撑阻力。每日PP/R1-R3/S1-S3。</p></div>
-    <div class="card"><h4>KST</h4><p>Pring多周期ROC加权。确认大级别趋势转折。</p></div>
-  </div>
-</div>
-
-<!-- 专属优化 -->
-<div class="section">
-  <h3>专为黄金XAUUSD M15优化</h3>
-  <div class="rules">
-    <li>SuperTrend ATR倍率 <span class="highlight">2.5</span> — 不是默认的3.0，专为黄金M15调校</li>
-    <li>Force Index平滑 <span class="highlight">EMA(8)</span> — 不是经典的13，M15需要更快响应</li>
-    <li>附带 <span class="highlight">参数配置指南</span> — 每个参数为什么这么设，什么行情怎么调</li>
-    <li>附带 <span class="highlight">四确认入场法</span> — 不是单指标，是判断系统</li>
-  </div>
-</div>
-
-<!-- 购买 -->
-<div class="section" id="buy">
-  <h3>选择你的套餐</h3>
-  <div class="packages">
-    <div class="pkg">
-      <h4>基础版</h4>
-      <div class="pkg-price">$27</div>
-      <ul>
-        <li>✅ 8个MT4自定义指标</li>
-        <li>✅ 安装说明</li>
-        <li>❌ 参数优化指南</li>
-        <li>❌ 四确认交易法</li>
-        <li>❌ 专属客服</li>
-      </ul>
-      <button class="cta" style="font-size:1em; padding:12px 40px;">购买基础版</button>
-    </div>
-    <div class="pkg premium">
-      <h4>Pro版 ⭐推荐</h4>
-      <div class="pkg-price">$47</div>
-      <ul>
-        <li>✅ 8个MT4自定义指标</li>
-        <li>✅ 8个MT5自定义指标</li>
-        <li>✅ 安装说明（图文）</li>
-        <li>✅ <span class="highlight">黄金M15参数优化指南</span></li>
-        <li>✅ <span class="highlight">四确认交易法详解</span></li>
-        <li>✅ <span class="highlight">30天邮件客服</span></li>
-      </ul>
-      <button class="cta" style="font-size:1em; padding:12px 40px;">购买Pro版</button>
-    </div>
-  </div>
-</div>
-
-<div class="section" style="text-align:center;">
-  <p style="color:#8892a0;">📧 联系: goldsnap@proton.me | 💬 支持中文/English</p>
-  <p style="color:#8892a0; margin-top:10px;">30天无理由退款 · 24小时内邮件回复</p>
-</div>
+<h3>❓ 常见问题</h3>
+<div class="card"><h4>支持什么平台？</h4><p>MT4（含.ex4编译文件）。指标拖到图表即用。</p></div>
+<div class="card"><h4>能用在其他品种吗？</h4><p>可以，但参数专门为XAUUSD M15优化。其他品种需自行调整。</p></div>
+<div class="card"><h4>能退款吗？</h4><p>30天内无条件退款，发邮件即可。</p></div>
+<div class="card"><h4>有MT5版吗？</h4><p>目前仅MT4版。MT5版开发中。</p></div>
 
 </div>
 
-<footer>GoldSnap Pro &copy; 2026 — 黄金M15专用交易系统 · 不是圣杯，但是一套经过验证的判断框架</footer>
+<footer>
+  GoldSnap Pro © 2026 · 黄金M15专用交易系统 · 不是圣杯，但是经过验证的判断框架<br>
+  📧 goldsnap@proton.me · 💬 QQ/微信: 2456167231
+</footer>
 </body>
 </html>
